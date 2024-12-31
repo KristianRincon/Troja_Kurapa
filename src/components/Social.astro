@@ -1,0 +1,32 @@
+---
+interface Props {
+  platform: 'twitter' | 'instagram' | 'facebook'; // Definir plataformas válidas
+}
+
+const { platform } = Astro.props as Props;
+
+const iconMap: Record<Props['platform'], string> = {
+  twitter: '/icons/twitter.svg',
+  instagram: '/icons/instagram.svg',
+  facebook: '/icons/facebook.svg',
+};
+
+const urlMap: Record<Props['platform'], string> = {
+  twitter: 'https://x.com/trojaKurapa/',
+  instagram: 'https://www.instagram.com/trojakurapa/',
+  facebook: 'https://www.facebook.com/trojakurapa/',
+};
+
+const iconSrc = iconMap[platform];
+const profileUrl = urlMap[platform];
+---
+
+<a 
+  href={profileUrl} 
+  target="_blank" 
+  rel="noopener noreferrer" 
+  class="inline-flex items-center gap-2 p-2 rounded-lg hover:bg-green-600 transition"
+>
+  <img src={iconSrc} alt={`${platform} icon`} class="w-6 h-6" />
+  <span class="sr-only">{platform}</span> <!-- Texto oculto para accesibilidad -->
+</a>
