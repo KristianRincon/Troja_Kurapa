@@ -5,7 +5,7 @@ import '../styles/global.css';
 ---
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -25,15 +25,16 @@ import '../styles/global.css';
 </header>
 
     <main class="px-4 sm:px-8 md:px-16 py-8">
-      <section id="about" class="mb-12">
+      <section id="inicio" class="mb-12">
         <h2 class="text-2xl font-semibold text-green-700">¿Quiénes somos?</h2>
         <p class="mt-4 text-gray-700">
-          Somos productores agroecologicos que cultivamos hortalizas y producimos nuestras propias semillas
-          Troja Kurapa es un emprendimiento rural dedicado a la producción y venta de hortalizas orgánicas como lechuga, acelga y espinaca. Promovemos el consumo consciente y fortalecemos la conexión con la naturaleza.
+          🌱 <span class="font-semibold text-green-800">Somos productores agroecológicos</span> que cultivamos <span class="italic text-green-700">hortalizas</span> y producimos nuestras propias <span class="font-bold text-green-600">semillas 🌾</span>.  
+          <span class="font-semibold text-green-900">Troja Kurapa</span> es un <span class="decoration-green-700">emprendimiento rural</span> dedicado a la producción y venta de <span class="text-green-800 font-bold">hortalizas orgánicas</span> como 🥬 <span class="italic">lechuga</span>, 🌿 <span class="italic">acelga</span>, y 🌱 <span class="italic">acedera</span>. Promovemos el <span class="text-green-700 font-bold">consumo consciente</span> y fortalecemos la <span class="italic decoration-green-500">conexión con la naturaleza 🌍</span>.
         </p>
+        
       </section>
 
-      <section class="py-12 bg-gray-50 text-center">
+      <section id="productos" class="py-12 bg-gray-50 text-center">
         <h2 class="text-3xl font-bold mb-8">Nuestros Productos</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
          
@@ -64,7 +65,7 @@ import '../styles/global.css';
         </div>
       </section>
 
-      <section class="py-12 bg-gray-100 text-center">
+      <section id="mapa" class="py-12 bg-gray-100 text-center">
         <h2 class="text-3xl font-bold mb-8">Visítanos en Troja Kurapa</h2>
         <div class="max-w-4xl mx-auto">
           <!-- Incrusta el mapa de Google Maps con el iframe obtenido -->
@@ -79,7 +80,7 @@ import '../styles/global.css';
         </div>
       </section>
       
-      <section class="py-12 bg-white">
+      <section id="contacto" class="py-12 bg-white">
         <h2 class="text-3xl font-bold text-center mb-8">Contáctanos</h2>
         <div class="max-w-3xl mx-auto bg-gray-100 p-8 rounded-lg shadow-lg">
           <div id="successMessage" class="hidden bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4">
@@ -164,6 +165,6 @@ import '../styles/global.css';
 
     <Footer />
 
-    
+
   </body>
 </html>
