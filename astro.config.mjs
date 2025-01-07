@@ -1,6 +1,15 @@
 import { defineConfig } from 'astro/config';
 
-// https://astro.build/config
 export default defineConfig({
-  integrations: [],
+  vite: {
+    server: {
+      proxy: {
+        '/api': {
+          target: 'https://formspree.io',
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/api/, ''),
+        },
+      },
+    },
+  },
 });

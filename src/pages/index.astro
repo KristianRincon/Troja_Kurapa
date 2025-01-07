@@ -10,6 +10,7 @@ import '../styles/global.css';
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Troja Kurapa</title>
+    <link rel="stylesheet" href="/dist/tailwind.css" />
   </head>
   
   <body class="bg-gray-50 text-gray-800">
@@ -87,7 +88,7 @@ import '../styles/global.css';
           </div>
           
           <form 
-            action="https://formspree.io/f/movqoeqp" 
+            action="/api/f/movqoeqp" 
             method="POST" 
             class="space-y-6"
             onsubmit="(function(e) {
@@ -99,6 +100,7 @@ import '../styles/global.css';
                 headers: {
                   'Accept': 'application/json'
                 },
+                
               }).then(response => {
                 if (response.ok) {
                   form.reset();

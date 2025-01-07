@@ -3,14 +3,15 @@
 ---
 
 <div>
-  <script src="https://cdn.tailwindcss.com"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </div>
 
-<nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-colors duration-300 bg-green-900 hover:bg-green-900">
+<nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-colors duration-300 bg-green-900 md:hover:bg-green-900">
   <div class="container mx-auto flex justify-between items-center p-3 text-white">
-    <h1 class="text-lg font-bold">Troja Kurapa</h1>
+    <a href="#inicio" class="text-lg font-bold" aria-label="Ir a la página de inicio">
+      Troja Kurapa
+    </a>
 
     <!-- Botón de hamburguesa (visible solo en móviles) -->
     <button id="menu-btn" class="md:hidden p-2 focus:outline-none">
@@ -20,16 +21,16 @@
     <!-- Menú (visible en desktop, oculto en móviles) -->
     <ul id="mobile-menu" class="hidden md:flex flex-col md:flex-row w-full md:w-auto absolute md:static top-16 left-0 bg-green-900 md:bg-transparent text-center md:text-left items-center">
       <li class="hover:bg-green-800 md:hover:bg-transparent">
-        <a href="#inicio" class="block py-2 px-4 hover:underline">Inicio</a>
+        <a href="#inicio" class="block py-2 px-4 hover:underline text-white">Inicio</a>
       </li>
       <li class="hover:bg-green-800 md:hover:bg-transparent">
-        <a href="#productos" class="block py-2 px-4 hover:underline">Productos</a>
+        <a href="#productos" class="block py-2 px-4 hover:underline text-white">Productos</a>
       </li>
       <li class="hover:bg-green-800 md:hover:bg-transparent">
-        <a href="#ubicacion" class="block py-2 px-4 hover:underline">Ubicación</a>
+        <a href="#ubicacion" class="block py-2 px-4 hover:underline text-white">Ubicación</a>
       </li>
       <li class="hover:bg-green-800 md:hover:bg-transparent">
-        <a href="#contacto" class="block py-2 px-4 hover:underline">Contacto</a>
+        <a href="#contacto" class="block py-2 px-4 hover:underline text-white">Contacto</a>
       </li>
     </ul>
   </div>
@@ -42,9 +43,9 @@
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
 
-    // Cambiar el fondo de la navbar al hacer scroll
+    // Cambiar el fondo de la navbar al hacer scroll (solo en pantallas medianas y grandes)
     window.addEventListener('scroll', () => {
-      if (navbar) {
+      if (window.innerWidth >= 768 && navbar) { // Solo aplica en pantallas md y mayores
         if (window.scrollY > 50) {
           navbar.classList.remove('bg-green-900');
           navbar.classList.add('bg-green-900/50'); // Verde transparente
@@ -61,7 +62,7 @@
         mobileMenu.classList.toggle('hidden');
 
         // Cambiar el ícono de "menu" a "close" y viceversa
-        const icon = menuBtn.querySelector('ion-icon');
+        const icon = menuBtn ? menuBtn.querySelector('ion-icon') : null;
         if (icon) {
           if (icon.getAttribute('name') === 'menu') {
             icon.setAttribute('name', 'close');
@@ -71,5 +72,21 @@
         }
       });
     }
+
+    // Ocultar el menú móvil al hacer clic en un enlace
+    const mobileLinks = document.querySelectorAll('#mobile-menu a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (mobileMenu) {
+          mobileMenu.classList.add('hidden'); // Oculta el menú móvil
+        }
+
+        // Cambiar el ícono de "close" a "menu"
+        const icon = menuBtn ? menuBtn.querySelector('ion-icon') : null;
+        if (icon && icon.getAttribute('name') === 'close') {
+          icon.setAttribute('name', 'menu');
+        }
+      });
+    });
   });
 </script>
