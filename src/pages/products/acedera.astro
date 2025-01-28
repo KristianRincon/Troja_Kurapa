@@ -1,0 +1,112 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Acedera - Troja Kurapa">
+  <!-- Sección 1: Hero con Superposición -->
+  <section class="bg-gray-100 py-12 pt-[96px]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <!-- Título -->
+      <h1 class="text-4xl font-bold text-green-700 mb-6">Acedera</h1>
+      <!-- Descripción -->
+      <p class="text-lg text-gray-700 mb-6">
+        Explora la intensidad y versatilidad de la acedera, una planta que añade un toque ácido único a tus platillos favoritos.
+      </p>
+      <!-- Contenedor de Imagen -->
+      <div class="relative mx-auto max-w-md aspect-w-1 aspect-h-1">
+        <img 
+          src="/images/acedera-hero.jpg" 
+          alt="Acedera fresca en un campo" 
+          class="object-cover w-full h-full rounded-lg shadow-lg"
+        />
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Sección 2: Detalles del Producto -->
+  <section class="py-12 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-green-600 mb-6 text-center">Detalles del Producto</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-4">
+        <li>Variedad: Acedera común y roja.</li>
+        <li>Rica en antioxidantes, vitamina C y potasio.</li>
+        <li>Un toque ácido que realza sabores en ensaladas y sopas.</li>
+        <li>Disponibilidad: Primavera y verano.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Sección 3: Usos Culinarios -->
+  <section class="py-12 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-green-600 mb-8 text-center">Usos Culinarios</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Tarjeta 1 -->
+        <div class="flex flex-col items-center bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+          <img src="/icons/soup.svg" alt="Sopas" class="w-16 h-16 mb-4">
+          <h3 class="text-xl font-semibold text-green-700 mb-2">Sopas</h3>
+          <p class="text-gray-700 text-center">
+            Añade acedera para un toque ácido que eleva cualquier caldo o sopa.
+          </p>
+        </div>
+        <!-- Tarjeta 2 -->
+        <div class="flex flex-col items-center bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+          <img src="/icons/salad.svg" alt="Ensaladas" class="w-16 h-16 mb-4">
+          <h3 class="text-xl font-semibold text-green-700 mb-2">Ensaladas</h3>
+          <p class="text-gray-700 text-center">
+            Fresca o ligeramente cocida, la acedera aporta sabor y textura.
+          </p>
+        </div>
+        <!-- Tarjeta 3 -->
+        <div class="flex flex-col items-center bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+          <img src="/icons/sauce.svg" alt="Salsas" class="w-16 h-16 mb-4">
+          <h3 class="text-xl font-semibold text-green-700 mb-2">Salsas</h3>
+          <p class="text-gray-700 text-center">
+            Perfecta para hacer purés, salsas verdes y aderezos.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección 4: Datos Interesantes -->
+  <section class="py-12 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+      <h2 class="text-3xl font-bold text-green-600 mb-8 text-center">Datos Interesantes</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Bloque 1 -->
+        <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+          <h3 class="text-xl font-bold text-green-700 mb-4">Historia</h3>
+          <p class="text-gray-700">
+            La acedera ha sido utilizada en la cocina europea desde la Edad Media como un ingrediente clave en recetas ácidas y refrescantes.
+          </p>
+        </div>
+        <!-- Bloque 2 -->
+        <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+          <h3 class="text-xl font-bold text-green-700 mb-4">Sostenibilidad</h3>
+          <p class="text-gray-700">
+            Crece fácilmente con pocas necesidades de agua, lo que la convierte en una planta amigable con el medio ambiente.
+          </p>
+        </div>
+        <!-- Bloque 3 -->
+        <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+          <h3 class="text-xl font-bold text-green-700 mb-4">Usos Medicinales</h3>
+          <p class="text-gray-700">
+            Tradicionalmente, la acedera se ha usado para tratar problemas digestivos y como diurético natural.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección 5: Beneficios -->
+  <section class="py-12 bg-gray-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-green-600 mb-6">Beneficios de la Acedera</h2>
+      <p class="text-lg text-gray-700">
+        La acedera es una opción deliciosa y nutritiva que combina un sabor único con múltiples beneficios para la salud.
+      </p>
+    </div>
+  </section>
+</Layout>

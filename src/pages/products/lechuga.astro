@@ -1,22 +1,28 @@
 ---
-import Layout from '../../layouts/Layout.astro'; // Si tienes un diseño base, úsalo aquí.
+import Layout from '../../layouts/Layout.astro'; 
 ---
 
 <Layout title="Lechuga - Troja Kurapa">
-  <!-- Sección 1: Título e Imagen -->
-  <section class="bg-gray-50 py-12 pt-[96px]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h1 class="text-4xl font-bold text-green-700 mb-6">Lechuga</h1>
-      <p class="text-lg text-gray-700 mb-4">
-        Descubre las propiedades, beneficios y el proceso de cultivo de nuestra lechuga fresca y orgánica.
-      </p>
+<!-- Sección 1: Título e Imagen -->
+<section class="bg-gray-50 py-12 pt-[96px]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <!-- Título -->
+    <h1 class="text-4xl font-bold text-green-700 mb-6">Lechuga</h1>
+    <!-- Descripción -->
+    <p class="text-lg text-gray-700 mb-4">
+      Descubre las propiedades, beneficios y el proceso de cultivo de nuestra lechuga fresca y orgánica.
+    </p>
+    <!-- Contenedor de Imagen -->
+    <div class="relative mx-auto max-w-md aspect-w-1 aspect-h-1">
       <img 
         src="/images/lechuga.jpg" 
         alt="Lechuga fresca" 
-        class="rounded-lg shadow-md mx-auto max-w-3xl"
+        class="object-cover w-full h-full rounded-lg shadow-md"
       />
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Sección 2: Detalles del Producto -->
   <section class="py-12 bg-white">
@@ -32,40 +38,152 @@ import Layout from '../../layouts/Layout.astro'; // Si tienes un diseño base, �
   </section>
 
   <!-- Sección 3: Proceso de Cultivo -->
-  <section class="py-12 bg-gray-50">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-green-600 mb-6">Proceso de Cultivo</h2>
-      <p class="text-lg text-gray-700 mb-4">
-        Nuestro proceso de cultivo sigue prácticas sostenibles para garantizar la máxima calidad y frescura.
-      </p>
-      <div class="space-y-8">
-        <div>
-          <h3 class="text-2xl font-semibold text-green-700">1. Preparación del Suelo</h3>
-          <p class="text-gray-700">
-            Seleccionamos suelos ricos en nutrientes, asegurando un entorno ideal para el crecimiento de la lechuga.
-          </p>
-        </div>
-        <div>
-          <h3 class="text-2xl font-semibold text-green-700">2. Siembra</h3>
-          <p class="text-gray-700">
-            Usamos semillas certificadas de alta calidad para una germinación uniforme.
-          </p>
-        </div>
-        <div>
-          <h3 class="text-2xl font-semibold text-green-700">3. Cuidados</h3>
-          <p class="text-gray-700">
-            Monitorizamos las plantas regularmente, aplicando riegos controlados y métodos naturales para prevenir plagas.
-          </p>
-        </div>
-        <div>
-          <h3 class="text-2xl font-semibold text-green-700">4. Cosecha</h3>
-          <p class="text-gray-700">
-            Cosechamos a mano para preservar la frescura y calidad de cada lechuga.
-          </p>
-        </div>
+<section class="py-12 bg-gray-50">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-bold text-green-600 mb-6">Proceso de Cultivo</h2>
+    <p class="text-lg text-gray-700 mb-8">
+      Nuestro proceso de cultivo sigue prácticas sostenibles para garantizar la máxima calidad y frescura.
+    </p>
+
+    <!-- Carrusel -->
+    <div class="relative">
+<!-- Contenedor del Carrusel -->
+<div id="carrusel" class="overflow-hidden relative min-h-[500px] md:min-h-[200px] flex items-center">
+  <!-- Paso 1: Preparación del Suelo -->
+  <div class="carrusel-item absolute inset-0 w-full transition-opacity duration-500 opacity-0 flex items-center">
+    <div class="flex flex-col md:flex-row items-center gap-8 p-4 h-full">
+      <img src="/images/lechuga.jpg" alt="Preparación del Suelo" class="w-full md:w-1/2 h-64 object-cover rounded-lg shadow-lg">
+      <div class="w-full md:w-1/2 flex-1">
+        <h3 class="text-2xl font-semibold text-green-700">1. Preparación del Suelo</h3>
+        <p class="text-gray-700 mt-2">
+          Seleccionamos suelos ricos en nutrientes, asegurando un entorno ideal para el crecimiento de la lechuga. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
       </div>
     </div>
-  </section>
+  </div>
+
+  <!-- Paso 2: Siembra -->
+  <div class="carrusel-item absolute inset-0 w-full transition-opacity duration-500 opacity-0 flex items-center">
+    <div class="flex flex-col md:flex-row items-center gap-8 p-4 h-full">
+      <img src="/images/siembra.jpg" alt="Siembra" class="w-full md:w-1/2 h-64 object-cover rounded-lg shadow-lg">
+      <div class="w-full md:w-1/2 flex-1">
+        <h3 class="text-2xl font-semibold text-green-700">2. Siembra</h3>
+        <p class="text-gray-700 mt-2">
+          Usamos semillas certificadas de alta calidad para una germinación uniforme. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Paso 3: Cuidados -->
+  <div class="carrusel-item absolute inset-0 w-full transition-opacity duration-500 opacity-0 flex items-center">
+    <div class="flex flex-col md:flex-row items-center gap-8 p-4 h-full">
+      <img src="/images/lechuga.jpg" alt="Cuidados" class="w-full md:w-1/2 h-64 object-cover rounded-lg shadow-lg">
+      <div class="w-full md:w-1/2 flex-1">
+        <h3 class="text-2xl font-semibold text-green-700">3. Cuidados</h3>
+        <p class="text-gray-700 mt-2">
+          Monitorizamos las plantas regularmente, aplicando riegos controlados y métodos naturales para prevenir plagas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Paso 4: Cosecha -->
+  <div class="carrusel-item absolute inset-0 w-full transition-opacity duration-500 opacity-0 flex items-center">
+    <div class="flex flex-col md:flex-row items-center gap-8 p-4 h-full">
+      <img src="/images/cosecha.jpg" alt="Cosecha" class="w-full md:w-1/2 h-64 object-cover rounded-lg shadow-lg">
+      <div class="w-full md:w-1/2 flex-1">
+        <h3 class="text-2xl font-semibold text-green-700">4. Cosecha</h3>
+        <p class="text-gray-700 mt-2">
+          Cosechamos a mano para preservar la frescura y calidad de cada lechuga. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <!-- Flechas de Navegación -->
+      <button
+        id="prev"
+        class="absolute top-1/2 -left-4 md:-left-8 transform -translate-y-1/2 bg-white bg-opacity-75 p-2 rounded-full shadow-md hover:bg-opacity-100 hover:bg-green-100 hover:shadow-lg transition-all duration-300"
+      >
+        <svg
+          class="w-6 h-6 text-green-600 hover:text-green-700 transition-colors duration-300"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M15 19l-7-7 7-7"
+          ></path>
+        </svg>
+      </button>
+      <button
+        id="next"
+        class="absolute top-1/2 -right-4 md:-right-8 transform -translate-y-1/2 bg-white bg-opacity-75 p-2 rounded-full shadow-md hover:bg-opacity-100 hover:bg-green-100 hover:shadow-lg transition-all duration-300"
+      >
+        <svg
+          class="w-6 h-6 text-green-600 hover:text-green-700 transition-colors duration-300"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M9 5l7 7-7 7"
+          ></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Script para el Carrusel -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const carruselItems = document.querySelectorAll('.carrusel-item');
+    const prevButton = document.getElementById('prev');
+    const nextButton = document.getElementById('next');
+    let currentIndex = 0;
+
+    // Función para mostrar el ítem actual
+    const showItem = (index: number) => {
+      carruselItems.forEach((item, i) => {
+        item.classList.toggle('opacity-0', i !== index);
+        item.classList.toggle('opacity-100', i === index);
+      });
+    };
+
+    // Mostrar el primer ítem al cargar la página
+    showItem(currentIndex);
+
+    // Navegar al ítem anterior
+    if (prevButton) {
+      prevButton.addEventListener('click', () => {
+      currentIndex = (currentIndex > 0) ? currentIndex - 1 : carruselItems.length - 1;
+      showItem(currentIndex);
+    });
+
+    if (nextButton) {
+      nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex < carruselItems.length - 1) ? currentIndex + 1 : 0;
+        showItem(currentIndex);
+      });
+    }
+
+    // Paso automático cada 10 segundos
+    setInterval(() => {
+      currentIndex = (currentIndex < carruselItems.length - 1) ? currentIndex + 1 : 0;
+      showItem(currentIndex);
+    }, 10000);
+  };
+});
+</script>
 
   <!-- Sección 4: Beneficios -->
   <section class="py-12 bg-white">
